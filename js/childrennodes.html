@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listchildennodes</title>
+</head>
+<body>
+    <ul class="collection">
+        <li class="collection-item">a</li>
+        <li class="collection-item">b</li>
+        <li class="collection-item">c</li>
+        <li class="collection-item">d</li>
+        <li class="collection-item">e</li>
+    </ul>
+    <script>
+var list=document.querySelector("ul.collection");
+console.log(list);
+console.log(list.children);//HTMLCollection(5) [li, li, li, li, li]
+console.log(list.children[0]);//<li>a</li>
+list.children[1].textContent="hello";//2nd chnage to helllo
+console.log(list.lastChild);//give inf0 about last child
+console.log(list.lastElementChild);//give last element
+console.log(list.childElementCount);//5
+
+
+var listitem=document.querySelector("li.collection-item:first-child");
+console.log(listitem);
+console.log(listitem.parentNode);//parent is ul so it give complete ul with li tag
+console.log(listitem.parentElement);//its give also ul with li tag
+console.log(listitem.parentElement.parentElement);//its give parent of parent whish is body
+console.log(listitem.parentElement.parentElement.parentElement);//its give html becayse body parent is html
+console.log(listitem.nextSibling);
+console.log(listitem.nextElementSibling);//gve hello bcs curent is a and next is hello
+console.log(listitem.previousElementSibling);//null bcs no any li
+
+
+//create li
+const li=document.createElement('li');
+li.className="collection-item";
+li.id="l5";
+li.setAttribute("title" ,"newitem");
+li.append(document.createTextNode('helloworld'));
+
+console.log(li);//<li class="collection-item" id="l5" title="newitem">helloworld</li>
+
+    </script>
+</body>
+</html>
