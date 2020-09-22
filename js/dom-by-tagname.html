@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom by tagname</title>
+</head>
+<body>
+    <p >this is my paragraph inside tag</p>
+    <p>this is p2</p>
+    <p>this is p3</p>
+    <p>this is p4</p>
+    <p>this is p5</p>
+    <p>this is p6</p>
+    <p>this is p7 italic </p>
+    <p>this is p8</p>
+    <p>this is p9</p>
+    <p>this is p10</p>
+    <p>this is p11</p>
+    <button  onclick="red()" class="bt2">enter for color</button>
+    <button  onclick="text()" class="bt2">enter for text</button>
+    <script>
+
+        function red(){
+var p=document.getElementsByTagName('p');
+var p1 =p[0].style.color="red";
+var p2 =p[1].style.color="green";
+var p3 =p[2].style.color="blue";
+var p4 =p[3].style.color="orange";
+var p5 =p[4].style.color="pink";
+var p6 =p[5].style.color="black";
+var p7 =p[6].style.color="sky";
+var p6 =p[5].style.color="black";
+var p7 =p[6].style.color="sky";
+var p6 =p[5].style.color="black";
+var p7 =p[6].style.fontStyle="italic";
+        }
+
+function text(){
+var p=document.getElementsByTagName('p');
+var p1 =p[0].innerHTML="wao this is edited text";
+var p2 =p[1].style.color="green";
+var p3 =p[2].style.color="blue";
+var p4 =p[3].style.color="orange";
+var p5 =p[4].style.color="pink";
+var p6 =p[5].style.color="black";
+var p7 =p[6].style.color="sky";
+var p6 =p[5].style.color="black";
+var p7 =p[6].style.color="sky";
+var p6 =p[5].style.color="black";
+var p7 =p[6].style.color="sky";
+        }     
+   
+
+    </script>
+</body>
+</html>
