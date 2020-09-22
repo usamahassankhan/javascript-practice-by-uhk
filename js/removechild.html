@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<div id="ad">
+<p>
+    this 1
+</p>
+<p>this 2</p>
+<p>this is p3</p>
+</div>
+<button onclick="a()"> delete</button>
+<script>
+    function a(){
+    var t=document.getElementsByTagName("p")[2];
+     var d=t.parentNode;
+    d.removeChild(t);
+    }
+</script>
+</body>
+</html>
