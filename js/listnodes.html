@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul class="collection">
+        <li>a</li>
+        <li>b</li>
+        <li>c</li>
+        <li>d</li>
+        <li>e</li>
+        <li>f</li>
+    </ul>
+    <script>
+        const list=document.querySelector('ul.collection');
+    console.log(list)//givr all li
+    console.log(list.childNodes)//NodeList(13) [text, li, text, li, text, li, text, li, text, li, text, li, text]0: text1: li2: text3: li4: text5: li6: text7: li8: text9: li10: text11: li12: textlength: 13__proto__: NodeList
+    console.log(list.childNodes[0])//govr complete info of parent child 
+    console.log(list.childNodes[0].nodeName)//#text
+    console.log(list.childNodes[0].nodeType)//3If the node is a text node, the nodeType property will return 3. If the node is a comment node, the nodeType property will return 8.
+    </script>
+</body>
+</html>
