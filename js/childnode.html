@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>childnode</title>
+</head>
+<body>
+<div id="main">
+    <p>
+        wao this is p1
+    </p>
+
+</div>
+
+<button onclick="a()">enter </button>
+<script>
+    function a(){
+    var main=document.getElementById("main");
+   var c=document.createElement('p');
+   console.log(c)
+   main.appendChild(c);
+   var text=document.createTextNode("this is nice of js");
+   c.appendChild(text);
+    }
+</script>
+    
+</body>
+</html>
