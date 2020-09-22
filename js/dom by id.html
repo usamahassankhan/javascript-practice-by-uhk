@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom by id</title>
+</head>
+<body>
+
+    <p  style="display: inline" onmouseover="on()" onmouseout="of()" id="1p"> this is paragraph</p>
+    <script>
+        
+        
+
+function on() {
+    var a=document.getElementById('1p');
+    a.style.backgroundColor="red";
+    
+}
+function of() {
+    var a=document.getElementById('1p');
+    a.style.backgroundColor="";
+    
+}
+    </script>
+</body>
+</html>
