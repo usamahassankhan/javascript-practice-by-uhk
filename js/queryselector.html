@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div onclick="f()" id="a"> this is div</div>
+    <p  onclick ="f1()"class="a1" >this is paragraph has class</p>
+    <p>this is dog</p>
+        <h1>heading</h1>
+        <input  name="txt" onclick="f3()" type="text">
+        <ul>
+            <li>a</li>
+            <li>b</li>
+            <li>c</li>
+            <li>d</li>
+            <li>e</li>
+        </ul>
+<button onclick="f()">div</button>
+<button onclick="f1()">class</button>
+<button onclick="f2()">class</button>
+<button onclick="f4()">ul</button>
+<button onclick="f5()">li</button>
+<button onclick="f6()">li odd</button>
+<button onclick="f7()">li even</button>
+        <script>
+            function f(){
+        
+            
+           var a= document.querySelector('#a');
+           a.style.color="yellow";
+            }
+            function f1(){
+        
+            
+        var a= document.querySelector('.a1');
+        a.style.color="red";
+         }
+
+         function f2(){
+        
+            
+        var a= document.querySelector('p');
+        a.style.color="orange";
+         }
+         function f3(){
+        
+            
+        var a= document.querySelector('input[name="txt"]');
+        a.style.color="orange";
+
+         }
+
+         function f4(){
+        
+            
+        var a= document.querySelector('ul');
+        a.style.color="orange";
+
+         }
+         function f5(){
+        
+            
+        var a= document.querySelector('li');
+        var b= document.querySelector('li:last-child');
+        var c= document.querySelector('li:nth-child(3)');
+        var c= document.querySelector('li:nth-child(odd)');//it will not work here becase selector is nit all
+        a.style.color="orange";
+        b.style.color="blue";
+        c.style.color="red";
+
+
+         }
+         function f6(){
+        
+        var c= document.querySelectorAll('li:nth-child(odd)');//it will not work here becase selector is nit all
+      c.forEach(function(li,index){
+        li.style.color="red";
+        li.style.fontSize="20px";
+      });
+        
+ }
+ function f7(){
+        
+        var c= document.querySelectorAll('li:nth-child(even)');//it will not work here becase selector is nit all
+      
+        c.forEach(function(li,index){
+        li.style.color="blue";
+        li.style.fontSize="30px";
+      });
+ }
+         
+         
+
+        </script>
+</body>
+</html>
