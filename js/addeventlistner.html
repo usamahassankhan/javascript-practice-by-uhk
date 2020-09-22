@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="a1">
+        this is p
+    </p>
+    <script>
+
+        1methond 
+     var a=document.querySelector("#a1")
+        a.addEventListener('click', function(e){
+            console.log("click");
+        });
+
+
+//2nd method
+        var a=document.getElementById("a1")
+        a.addEventListener('click', function(e){
+            console.log("click");
+        });
+
+        //3rd method
+        var a=document.getElementById("a1");
+        a.addEventListener("click",onclick);
+        function onclick(e){
+            console.log("nice");
+
+        }
+
+        var a=document.getElementById("a1");
+        a.addEventListener("keypress",onclick);
+        function onclick(e){
+            console.log("nice");
+
+        }
+
+        var a=document.getElementById("a1");
+        a.addEventListener("focus",onclick);
+        function onclick(e){
+            console.log("nice");
+
+        }
+
+        
+    </script>
+</body>
+</html>
