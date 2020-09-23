@@ -8,17 +8,65 @@
     body{
       text-align: center;
     }
+    .btn{
+      background-color: beige;
+      margin-left: 118px;
+    }
   </style>
 </head>
 <body>
+  <div>
   <input type="text" id="input">
   <button  onclick ="add()" id="addbtn">ADD ITEM</button>
+  <button  onclick ="deleteall()" id="addbtn">DELETE ALL</button>
+</div>
+<div>
+  <ul id="itsul">
 
+  </ul>
+</div>
 
   <script>
 function add(){
 var input=document.getElementById("input");
 console.log(input.value);
+var itsul=document.getElementById("itsul");
+var li=document.createElement('li');
+itsul.appendChild(li);
+
+var val=document.createTextNode(input.value);
+var lies=li.appendChild(val);
+
+
+var btn=document.createElement("button");
+var btnval=document.createTextNode("DELETE");
+ btn.appendChild(btnval);
+li.appendChild(btn);
+btn.setAttribute("class","btn");
+btn.setAttribute("onclick","deletes(this)");
+
+var editbtn=document.createElement("button");
+var editbtnval=document.createTextNode("edit");
+editbtn.appendChild(editbtnval);
+editbtn.setAttribute("class","btn");
+editbtn.setAttribute("onclick","edits(this)");
+
+li.appendChild(editbtn);
+}
+
+
+
+function deletes(e){
+
+e.parentNode.remove();
+}
+function deleteall(){
+  itsul.innerHTML="";
+}
+function edits(e){
+ var val =e.parentNode.firstChild.nodeValue;
+ var editvalue=prompt("enter edit value",val);
+ e.parentNode.firstChild.nodeValue=editvalue;
 }
   </script>
 </body>
