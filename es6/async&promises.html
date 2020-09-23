@@ -42,7 +42,10 @@ setInterval(function() {     //it will chech aftrte 1 sec and print every one se
 var promise =new Promise(function(resolve,reject){
     var study="availble";
     if(study==='availble'){
-    resolve("ha bahe parh leye 8 hours");
+        setTimeout(function() {  //its up to u to put set timet here or not
+            resolve("ha bahe parh leye 8 hours");   
+        }, 3000);
+   
                         }
     else{ 
     reject("nahe parha yar" );
