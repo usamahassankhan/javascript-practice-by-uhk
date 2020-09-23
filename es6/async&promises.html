@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=`, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    
+
+<script>
+
+
+    setTimeout( function(){
+        console.log(1)
+    },1000);
+  
+    console.log(2)
+    console.log(3)
+    console.log(4)
+    console.log(5)
+    console.log(6)
+
+
+
+    //wao
+    var name12;
+    
+    setTimeout( function(){   //after 1 sec this functon  will be run
+        name12="uhk"
+    },1000);
+    console.log(name12);  //it will givr u undefine bcs of 1 sec time  console print it bfore 1 sec so use
+
+
+setInterval(function() {     //it will chech aftrte 1 sec and print every one sec later
+    console.log(name12);  //prpblem is that this pricit again and agn after one sec so solution is promise
+},10000000000);
+
+
+//promise
+var promise =new Promise(function(resolve,reject){
+    var study="availble";
+    if(study==='availble'){
+    resolve("ha bahe parh leye 8 hours");
+                        }
+    else{ 
+    reject("nahe parha yar" );
+       }
+})
+
+promise.then(function(data){ //if resolve runn  it
+    console.log(data)
+})
+.catch(function(error){  //if reject run it
+    console.log("error")
+})
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
