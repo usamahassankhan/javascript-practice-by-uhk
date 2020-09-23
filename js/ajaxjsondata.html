@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax-with json-array and non array</title>
+</head>
+<body>
+    
+
+    <button id="button1">
+load single json non array
+    </button>
+    <button id="button2">
+        load json array
+            </button>
+    <h1>Customer</h1>  
+    <div id="customer"></div>
+    <h1>Customers</h1>  
+    <div id="customers"></div>
+    
+    <script>
+    // Load Single Customer
+    document.getElementById('button1').addEventListener('click', loadCustomer);
+
+    document.getElementById('button2').addEventListener('click', loadCustomers);
+    function loadCustomer(e) {
+      const xhr = new XMLHttpRequest();
+    
+      xhr.open('GET', 'customer.json', true);
+    
+      xhr.onload = function(){
+        if(this.status === 200) {
+          // console.log(this.responseText);
+    
+          const customer = JSON.parse(this.responseText);
+    
+          const output = `
+            <ul>
+              <li>ID: ${customer.id}</li>
+              <li>Name: ${customer.name}</li>
+              <li>Company: ${customer.company}</li>
+              <li>Phone: ${customer.phone}</li>
+            </ul>
+          `;
+    
+          document.getElementById('customer').innerHTML = output;
+        }
+      }
+    
+      xhr.send();
+    }
+    
+    // Load Customers
+
+// here data is in array like
+// [{
+//   "A":1
+
+// }
+// {"b":3}
+// ]
+
+function loadCustomers(e) {
+  const xhr = new XMLHttpRequest();
+
+  xhr.open('GET', 'customers.json', true);
+
+  xhr.onload = function(){
+    if(this.status === 200) {
+      // console.log(this.responseText);
+
+      const customers = JSON.parse(this.responseText);
+
+      let output = '';
+
+      customers.forEach(function(customer){
+        output += `
+        <ul>
+          <li>ID: ${customer.id}</li>
+          <li>Name: ${customer.name}</li>
+          <li>Company: ${customer.company}</li>
+          <li>Phone: ${customer.phone}</li>
+        </ul>
+      `;
+      });
+
+      document.getElementById('customers').innerHTML = output;
+    }
+  }
+
+  xhr.send();
+}
+  </script>
+    
+</body>
+</html>
