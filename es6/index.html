@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>ecma script 6 2015</h1>
+    <script>
+
+var name='uhk';
+function a(){ //here uhk is global scope  and name asad is local scope bcs its with var variable so output will be uhk 
+    var name="asad" //it u remove var form name asad thrn output will be asad bcs its become gloabl 
+
+}
+console.log(name);
+
+
+
+if(true){
+    var name="asad"   //local abd gloabd works probels face inly n function  it will work fine here
+                      //if its false so name woul be uh bcs thats gloabl
+                          }
+console.log(name)
+
+//let
+//if u use let so its bcome local u cant use that varinl outsid  curly bracket
+if(true){
+    let name="uhkharry"
+
+}
+console.log(name);   //output would be asad not uhkharyr bcs let and its cannot be access outside curly bracket
+    </script>
+</body>
+</html>
