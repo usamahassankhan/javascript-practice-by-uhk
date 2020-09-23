@@ -63,7 +63,7 @@ e.parentNode.remove();
 function deleteall(){
   itsul.innerHTML="";
 }
-function edits(e){
+function edits(e){   //e refer this ,eams its pick whole function but when arrow functio it takes parent
  var val =e.parentNode.firstChild.nodeValue;
  var editvalue=prompt("enter edit value",val);
  e.parentNode.firstChild.nodeValue=editvalue;
