@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //es5 way
+        function a (){
+            console.log('a');
+
+        }
+        a()
+        function a1 (b,c){
+            console.log(b,c);
+
+        }
+        a1(2,3)
+
+        function a2 (b,c){
+             d=b+c;
+            return d;
+
+        }
+        a2(2,3)
+        console.log(d);
+
+//es6 way
+var a =function(){  //function witthout name
+    console.log("its es6");
+}
+a()
+
+//arrow with no paramater
+var arrow=()=>{
+    console.log("nice arrow function");
+
+}
+arrow()
+
+
+
+//arrow function wth no paramater
+
+var arrow1=_=>{
+    console.log("nice arrow function with underscore");
+
+}
+arrow1()
+
+//arrow function wth  paramaters
+
+var arrow2=(data)=>{
+    console.log(`nice arrow function with underscore${data}`);
+
+}
+arrow2('nicebro')
+
+//arrow with multi paramaters
+var arrow2=(data,data1)=>{
+    console.log(`nice arrow function with underscore${data}nad ${data1}`);
+
+}
+arrow2('nicebro','uhk')
+
+
+
+
+    </script>
+    
+</body>
+</html>
