@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //es5 class
+        function a(name,age){
+            this.name=name,
+            this.age=age
+        }
+        var ob=new a("uhk","harry")
+        console.log(ob.name)
+
+
+// class with es6
+class Student{
+    constructor(name,age){
+        this.name=name,
+        this.age=age
+    }
+}
+let oh=new Student("uhk",13);
+console.log(oh.age)
+
+
+//merging of two class
+class School extends Student{
+    constructor(name,age,school){
+        super(name,age)
+        this.school=school}
+ }
+let scl=new School("uhkharry",118,'hilton')
+console.log(scl.school)
+console.log(scl.age)
+
+    </script>
+    
+</body>
+</html>
