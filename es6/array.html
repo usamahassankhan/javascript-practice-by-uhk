@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      let arr=[{name:"uhk",age:20},{name:"uhkharry",age:40}]
+//map function
+
+arr.filter((a)=>console.log(a));//filter is aslo call back functio and highr order as wll
+
+
+ //if u retur true it wil give complete arry after filer
+ var d=arr.filter((a)=>{
+ return true
+ });
+ console.log(d)
+
+
+//now filtering
+ var d=arr.filter((a)=>{
+ return a.name==="uhk"  //it will give u fisrt obj which is uhk and age 20 bcs its match with uhk whic is in obj 1
+ });
+ console.log(d)
+
+
+ //filter with arrow
+ var d=arr.filter((a)=>a.name==="uhkharry" ) //it will give u fisrt obj which is uhk and age 20 bcs its match with uhk whic is in obj 1
+ 
+ console.log(d)
+
+
+ //search;
+ var name="uhk"
+ let search="u";
+ if(name.startsWith(search))
+ console.log(name);
+
+//  var name="uhk"
+//  var search="u";
+//  if(name.endssWith(search))
+//  console.log(name);
+
+ //array map   its pick array and covert in to  new erree what ever u want
+
+
+ var arrays=[1,2,3,4,5,6];
+
+ var map=arrays.map((a)=>a*2)
+ console.log(arrays)
+ console.log(map)
+
+ //update using ma function
+ var names=[{name:"uhk"},{name:"uhkharry"}];
+ var map1=names.map((a)=>a.name[0]="wared")
+ console.log(map1)
+    </script>
+</body>
+</html>
