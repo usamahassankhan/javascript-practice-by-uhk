@@ -99,6 +99,43 @@ var ternary=( a<5 && a>3 ?0:1) //u can use and or or all bitwise operator here
 //ternary as if else
 var ternary=( a<5 && a>3 ?a<8 && a>0:1) //ifelse
 console.log(ternary);
+
+
+
+
+
+//call back function 
+//when one functio take aurgumet of anothe function so its call back functuo for examokle here settime out has anther arrow function
+setInterval(() => {
+    
+    console.log("wao its call back function")
+}, 1000);
+setTimeout(() => {
+    console.log("wao it will print after 1 sec bcs ir settieout functuon")
+},1000);
+
+
+//one more examle of call back function
+setTimeout(() => {
+    a("uhk its call back functon made by me")
+}, 2000);
+
+var a=(data)=>
+console.log(data)
+
+
+//higher order function
+//thise function whch receives function as a aparamater andn output function wihic its takes as parmaters soits called hgher order function7
+var g=(a)=>{
+setTimeout(() => {
+    a("this isn highr order function")
+}, 2000);
+}
+var a=(data)=>{
+console.log(data)
+}
+
+g(a)
     </script>
 </body>
 </html>

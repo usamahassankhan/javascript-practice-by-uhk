@@ -52,7 +52,7 @@ arrow1()
 
 //arrow function wth  paramaters
 
-var arrow2=(data)=>{
+var arrow2=(data)=>{  //if onlyone paramater so dont n3ed to use round brackaet here data is working
     console.log(`nice arrow function with underscore${data}`);
 
 }
@@ -64,6 +64,30 @@ var arrow2=(data,data1)=>{
 
 }
 arrow2('nicebro','uhk')
+
+//arrow with return
+var arrow2=data=>
+{
+ return "uhk"
+}
+console.log(arrow2());
+
+//arrow with return best
+var arrow4=data=>"uhkharry"
+console.log(arrow4());
+
+
+
+
+//function with this
+function aabd(){
+    console.log(this)   //this pointout this function only  get current function wheue u use this keyword
+}
+aabd()
+//arrow with
+ //this keyword
+var arrow5=data=>"uhkharry"    
+console.log(arrow5(this));  //here   arrow function this key word point oot parent object not current unlik normal function
 
 
 
